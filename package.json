@@ -13,6 +13,15 @@
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   },
   "scripts": {
+    "postinstall": "npm run generate:copy && npm run generate:replace",
+    "generate:copy": "npm run generate:copy:webcomponent && npm run generate:copy:webcomponent:src && npm run generate:copy:demo && npm run generate:copy:style",
+    "generate:copy:demo": "npm run generate:copy:demo:files && npm run generate:copy:demo:directory:img",
+    "generate:copy:demo:files": "copyfiles -f node_modules/vl-*/demo/* ./demo",
+    "generate:copy:demo:directory:img": "copyfiles -f node_modules/vl-*/demo/img/* ./demo/img",
+    "generate:copy:style": "node ./scripts/copy-styles.js",
+    "generate:copy:webcomponent": "copyfiles -f -e '**/*.min.js' -e '**/*.src.js' node_modules/*/dist/vl-*.js .",
+    "generate:copy:webcomponent:src": "copyfiles -f node_modules/*/src/vl-*.js src",
+    "generate:replace": "replace '/src/(.*).js' '../$1.js' ./demo/vl*.*",
     "release:prepare": "echo npm run generate",
     "release:testless": "np --yolo",
     "test:e2e": "npm run test:server:start && npm run test:e2e:chrome && npm run test:e2e:firefox",
@@ -93,5 +102,8 @@
     "vl-ui-upload": "^3.0.5",
     "vl-ui-util": "^5.2.13",
     "vl-ui-wizard": "^1.2.3"
+  },
+  "devDependencies": {
+    "copyfiles": "2.3.0"
   }
 }

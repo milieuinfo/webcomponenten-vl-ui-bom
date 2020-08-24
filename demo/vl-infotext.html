@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>vl-infotext voorbeeld</title>
+    <script type="module" src="/node_modules/vl-ui-demo/dist/vl-demo-all.js"></script>
+    <script type="module" src="/node_modules/vl-ui-body/dist/vl-body.js"></script>
+
+    <script type="module" src="../vl-infotext.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/vl-infotext.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/vl-ui-body/dist/style.css" />
+</head>
+
+<body is="vl-body">
+    <vl-demo-page data-vl-webcomponent="vl-infotext" data-vl-link="https://overheid.vlaanderen.be/webuniversum/v3/documentation/components/vl-ui-infotext">
+        <vl-demo data-vl-title="Infotext">
+            <div id="infotext" is='vl-infotext'>
+                <div>
+                    <div data-vl-value>3200</div>
+                    <div data-vl-text>Bezoekers per dag</div>
+                </div>
+            </div>
+        </vl-demo>
+
+        <vl-demo data-vl-title="Infotext met link">
+            <div is='vl-infotext'>
+                <a href='#'>
+                    <div data-vl-value>3200</div>
+                    <div data-vl-text>Bezoekers per dag</div>
+                </a>
+            </div>
+        </vl-demo>
+
+        <vl-demo data-vl-title="Infotext badge">
+            <div id="infotext-badge" is='vl-infotext' data-vl-badge>
+                <div>
+                    <div data-vl-value>12</div>
+                    <div data-vl-text>Openstaande zaken</div>
+                </div>
+            </div>
+        </vl-demo>
+
+        <vl-demo data-vl-title="Infotext badge met link">
+            <div is='vl-infotext' data-vl-badge>
+                <a href='#'>
+                    <div data-vl-value>12</div>
+                    <div data-vl-text>Openstaande zaken</div>
+                </a>
+            </div>
+        </vl-demo>
+
+        <vl-demo data-vl-title="Infotext badge met complexere content">
+            <div id="infotext-badge-complex-content" is='vl-infotext' data-vl-badge>
+                <div>
+                    <div data-vl-value>
+                        <span class="lengte-waarde" style="font-size: 1.25em;">150</span> <span class="eenheid-waarde"
+                            style="font-size: 1em;">cm</span>
+                    </div>
+                    <div data-vl-text>
+                        <span class="lengte" style="font-size: 1.25em;">Lengte</span> <span class="eenheid"
+                            style="font-size: 1em;">(eenheid)</span>
+                    </div>
+                </div>
+            </div>
+        </vl-demo>
+    </vl-demo-page>
+</body>
+
+</html>
