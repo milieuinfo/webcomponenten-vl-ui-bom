@@ -21,16 +21,8 @@ De API van elke webcomponent worden gepubliceerd via de [demo](https://webcompon
 
 
 ## Demo
-De [demo](https://webcomponenten.omgeving.vlaanderen.be) pagina bevat een overzicht van de mogelijkheden met code voorbeelden. Lokaal opstarten kan met onderstaand [NPM](https://www.npmjs.com) script.
-``` bash
-$ npm run demo
-```
+De [demo](https://webcomponenten.omgeving.vlaanderen.be) pagina bevat een overzicht van de mogelijkheden met code voorbeelden.
 
-## Publicatie
-Om een nieuwe webcomponenten pagina te publiceren kan het generate script uitgevoerd worden.
-``` bash
-$ npm run generate
-```
 
 ## Testen
 De webcomponent bevat verschillende unit testen die bij elke commit geautomatiseerd in Chrome en Firefox draaien. Hierdoor kunnen we bij elke release een minimum aan kwaliteit garanderen. Later zullen er ook nog UI testen toegevoegd worden zodat al de functionaliteit uitgebreid getest wordt.
