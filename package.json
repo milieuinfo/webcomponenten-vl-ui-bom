@@ -22,7 +22,7 @@
     "generate:copy:webcomponent": "copyfiles -f -e '**/*.min.js' -e '**/*.src.js' node_modules/*/dist/vl-*.js .",
     "generate:copy:webcomponent:src": "copyfiles -f node_modules/*/src/vl-*.js src",
     "generate:replace": "replace '/src/(.*).js' '../$1.js' ./demo/vl*.*",
-    "release:prepare": "echo npm run generate",
+    "release:prepare": "echo no release prepare necessary",
     "release:testless": "np --yolo",
     "test:e2e": "npm run test:server:start && npm run test:e2e:chrome && npm run test:e2e:firefox",
     "test:e2e:grid": "npm run test:server:start && npm run test:e2e:chrome:grid && npm run test:e2e:firefox:grid",
