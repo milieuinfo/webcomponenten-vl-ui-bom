@@ -23,9 +23,8 @@
     "generate:replace": "replace '/src/(.*).js' '../$1.js' ./demo/vl*.*",
     "release:prepare": "echo no release prepare necessary",
     "release:testless": "np --yolo",
-    "pretest": "npm run generate:copy && npm run generate:replace",
-    "pretest:e2e": "npm run pretest && http-server &",
-    "test:e2e": "npm run test:e2e:chrome && npm run test:e2e:firefox",
+    "pretest": "npm run generate:copy && npm run generate:replace &",
+    "test:e2e": "npm run pretest && http-server & npm run test:e2e:chrome && npm run test:e2e:firefox",
     "test:e2e:grid": "npm run test:e2e:chrome:grid && npm run test:e2e:firefox:grid",
     "test:e2e:chrome": "mocha --chrome",
     "test:e2e:chrome:grid": "mocha --chrome --grid",
@@ -34,7 +33,7 @@
     "test:e2e:opera": "mocha --opera",
     "test:e2e:safari": "mocha --safari",
     "posttest:e2e": "pkill -f http-server",
-    "pretest:grid": "npm run pretest",
+    "prepare:grid": "npm run pretest",
     "test:grid": "npm run test:e2e:grid"
   },
   "bugs": {
