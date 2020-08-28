@@ -2,3 +2,5 @@
 npm-debug*
 node_modules
 .idea
+vl-*.css
+vl-*.js
