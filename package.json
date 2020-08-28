@@ -13,7 +13,6 @@
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   },
   "scripts": {
-    "postinstall": "npm run generate:copy && npm run generate:replace",
     "generate:copy": "npm run generate:copy:webcomponent && npm run generate:copy:webcomponent:src && npm run generate:copy:demo && npm run generate:copy:style",
     "generate:copy:demo": "npm run generate:copy:demo:files && npm run generate:copy:demo:directory:img",
     "generate:copy:demo:files": "copyfiles -f node_modules/vl-*/demo/* ./demo",
@@ -24,17 +23,19 @@
     "generate:replace": "replace '/src/(.*).js' '../$1.js' ./demo/vl*.*",
     "release:prepare": "echo no release prepare necessary",
     "release:testless": "np --yolo",
-    "test:e2e": "npm run test:server:start && npm run test:e2e:chrome && npm run test:e2e:firefox",
-    "test:e2e:grid": "npm run test:server:start && npm run test:e2e:chrome:grid && npm run test:e2e:firefox:grid",
-    "test:grid": "npm run test:e2e:grid",
-    "posttest:e2e": "pkill -f http-server",
+    "pretest": "npm run generate:copy && npm run generate:replace",
+    "pretest:e2e": "npm run pretest && http-server &",
+    "test:e2e": "npm run test:e2e:chrome && npm run test:e2e:firefox",
+    "test:e2e:grid": "npm run test:e2e:chrome:grid && npm run test:e2e:firefox:grid",
     "test:e2e:chrome": "mocha --chrome",
     "test:e2e:chrome:grid": "mocha --chrome --grid",
     "test:e2e:firefox": "mocha --firefox",
     "test:e2e:firefox:grid": "mocha --firefox --grid",
     "test:e2e:opera": "mocha --opera",
     "test:e2e:safari": "mocha --safari",
-    "test:server:start": "http-server &"
+    "posttest:e2e": "pkill -f http-server",
+    "pretest:grid": "npm run pretest",
+    "test:grid": "npm run test:e2e:grid"
   },
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponenten-vl-ui-bom/issues"
