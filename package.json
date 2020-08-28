@@ -33,8 +33,7 @@
     "test:e2e:opera": "mocha --opera",
     "test:e2e:safari": "mocha --safari",
     "posttest:e2e": "pkill -f http-server",
-    "prepare:grid": "npm run pretest",
-    "test:grid": "npm run test:e2e:grid"
+    "test:grid": "npm run pretest && npm run test:e2e:grid"
   },
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponenten-vl-ui-bom/issues"
