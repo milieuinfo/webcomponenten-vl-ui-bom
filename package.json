@@ -21,7 +21,7 @@
     "generate:copy:style": "node ./scripts/copy-styles.js",
     "generate:copy:webcomponent": "copyfiles -f -e '**/*.min.js' -e '**/*.src.js' node_modules/*/dist/vl-*.js .",
     "generate:copy:webcomponent:src": "copyfiles -f node_modules/*/src/vl-*.js src",
-    "generate:replace": "replace '/src/(.*).js' '../$1.js' ./demo/vl*.*",
+    "generate:replace": "replace '/src/(.*).js' '/$1.js' ./demo/vl*.*",
     "release:prepare": "echo no release prepare necessary",
     "release:testless": "np --yolo",
     "test:e2e": "npm run generate && npm run test:server:start && npm run test:e2e:chrome && npm run test:e2e:firefox",
