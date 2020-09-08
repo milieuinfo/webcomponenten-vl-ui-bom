@@ -25,7 +25,7 @@
     "release:testless": "np --yolo",
     "test:server:start": "http-server &",
     "test": "npm run test:server:start && mocha --chrome && mocha --firefox",
-		"test:grid": "npm run test:server:start && mocha --chrome --grid && mocha --firefox --grid"
+    "test:grid": "npm run test:server:start && mocha --chrome --grid && mocha --firefox --grid"
   },
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponenten-vl-ui-bom/issues"
