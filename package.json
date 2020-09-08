@@ -33,7 +33,7 @@
     "test:e2e:opera": "mocha --opera",
     "test:e2e:safari": "mocha --safari",
     "posttest:e2e": "pkill -f http-server",
-    "test:grid": "npm run generate && npm run test:e2e:grid",
+    "test:grid": "npm run test:e2e:grid",
     "test:server:start": "http-server &"
   },
   "bugs": {
