@@ -25,7 +25,8 @@
     "release:testless": "np --yolo",
     "test:server:start": "http-server &",
     "test": "npm run test:server:start && mocha --chrome && mocha --firefox",
-    "test:grid": "npm run test:server:start && mocha --chrome --grid && mocha --firefox --grid"
+    "test:grid": "npm run test:server:start && mocha --chrome --grid && mocha --firefox --grid",
+    "posttest": "pkill -f http-server"
   },
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponenten-vl-ui-bom/issues"
@@ -35,6 +36,7 @@
     "vl-ui-action-group": "^3.0.6",
     "vl-ui-alert": "^4.0.0",
     "vl-ui-body": "^1.0.4",
+    "vl-ui-breadcrumb": "^1.0.0",
     "vl-ui-button": "^5.0.6",
     "vl-ui-checkbox": "^3.2.0",
     "vl-ui-code-preview": "^1.0.1",
@@ -92,6 +94,7 @@
     "vl-ui-typography": "^3.1.1",
     "vl-ui-upload": "^3.0.5",
     "vl-ui-util": "^5.2.13",
+    "vl-ui-video-player": "^1.0.0",
     "vl-ui-wizard": "^1.2.3"
   },
   "devDependencies": {
