@@ -58,7 +58,7 @@ Release:
 ---
 version: 2
 plan:
-  key: VLUIBOM
+  key: WEBCO-VLUIBOM
 
 plan-permissions:
   - groups:
