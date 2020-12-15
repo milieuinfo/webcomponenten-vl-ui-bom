@@ -25,7 +25,7 @@
     "release:testless": "np --yolo",
     "test:server:start": "http-server &",
     "test": "npm run test:server:start && mocha --chrome && mocha --firefox",
-    "test:grid": "npm run test:server:start && mocha --chrome --browserstack && mocha --firefox --browserstack && mocha --edge --browserstack",
+    "test:grid": "npm run test:server:start && mocha --chrome --browserstack",
     "posttest": "pkill -f http-server"
   },
   "bugs": {
