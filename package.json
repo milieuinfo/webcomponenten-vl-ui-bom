@@ -43,7 +43,7 @@
     "vl-ui-contact-card": "^1.0.0",
     "vl-ui-content-header": "^3.0.6",
     "vl-ui-cookie-consent": "^4.1.2",
-    "vl-ui-core": "^7.0.2",
+    "vl-ui-core": "7.0.1",
     "vl-ui-data-table": "^4.0.2",
     "vl-ui-datepicker": "^3.2.2",
     "vl-ui-demo": "^1.2.4",
