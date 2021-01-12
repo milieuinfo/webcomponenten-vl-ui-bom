@@ -1,9 +1,6 @@
 module.exports = {
     "full-trace": true,
-    "reporter": "mocha-multi-reporters",
-    "reporterOptions": {
-        "configFile": 'reporter-config.json'
-    },
+    "reporter": 'spec',
     "spec": ["node_modules/vl-ui-*/test/e2e/*.test.js"],
-    "timeout": '50000'
+    "timeout": '200000'
 };
