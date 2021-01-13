@@ -41,7 +41,7 @@
     "vl-ui-button": "^5.0.8",
     "vl-ui-checkbox": "^3.2.3",
     "vl-ui-code-preview": "^1.0.3",
-    "vl-ui-contact-card": "github:milieuinfo/webcomponent-vl-ui-core#idle-timeout",
+    "vl-ui-contact-card": "^1.0.0",
     "vl-ui-content-header": "^3.0.6",
     "vl-ui-cookie-consent": "^4.1.2",
     "vl-ui-cookie-statement": "^0.0.1",
