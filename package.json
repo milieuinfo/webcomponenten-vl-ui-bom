@@ -25,7 +25,7 @@
     "release:testless": "np --yolo",
     "test:server:start": "http-server &",
     "test": "npm run test:server:start && mocha --chrome && mocha --firefox",
-    "test:grid": "npm run test:server:start && mocha --chrome --browserstack",
+    "test:grid": "npm run test:server:start && mocha --chrome --browserstack --bom",
     "posttest": "pkill -f http-server"
   },
   "bugs": {
@@ -45,7 +45,7 @@
     "vl-ui-content-header": "^3.0.6",
     "vl-ui-cookie-consent": "^4.1.2",
     "vl-ui-cookie-statement": "^0.0.1",
-    "vl-ui-core": "github:milieuinfo/webcomponent-vl-ui-core#idle-timeout",
+    "vl-ui-core": "github:milieuinfo/webcomponent-vl-ui-core#identifier",
     "vl-ui-data-table": "^4.0.2",
     "vl-ui-datepicker": "^3.2.2",
     "vl-ui-demo": "^1.2.4",
