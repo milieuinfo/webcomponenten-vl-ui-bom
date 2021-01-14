@@ -6,3 +6,7 @@ vl-*.css
 vl-*.js
 demo/**
 *.xml
+test/**/*.js
+test/**/*.bin
+test/**/*.pdf
+test/**/*.txt

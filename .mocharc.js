@@ -4,6 +4,6 @@ module.exports = {
     "reporterOptions": {
         "configFile": 'reporter-config.json'
     },
-    "spec": ["node_modules/vl-ui-*/test/e2e/*.test.js"],
+    "spec": ["test/**/*.test.js"],
     "timeout": '1000000'
 };
