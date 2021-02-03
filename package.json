@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "vl-ui-accessibility": "0.0.1",
-    "vl-ui-accordion": "3.0.10",
+    "vl-ui-accordion": "3.0.11",
     "vl-ui-action-group": "3.1.2",
     "vl-ui-alert": "4.0.1",
     "vl-ui-body": "1.0.7",
