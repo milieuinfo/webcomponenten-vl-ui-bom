@@ -16,6 +16,12 @@
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   },
   "scripts": {
+    "pregenerate": "npm run pregenerate:clean",
+    "pregenerate:clean": "npm run pregenerate:clean:test && npm run pregenerate:clean:demo && npm run pregenerate:clean:js && npm run pregenerate:clean:css",
+    "pregenerate:clean:test": "find test -name '*.*' ! -name '*.yml' -delete",
+    "pregenerate:clean:demo": "find demo -name '*.*' -delete",
+    "pregenerate:clean:js": "find . -name 'vl-*.js' -maxdepth 1 -delete",
+    "pregenerate:clean:css": "find . -name 'vl-*.css' -maxdepth 1 -delete",
     "generate": "npm run generate:copy && npm run generate:replace",
     "generate:copy": "npm run generate:copy:webcomponent && npm run generate:copy:test && npm run generate:copy:demo && npm run generate:copy:style",
     "generate:copy:webcomponent": "copyfiles -f -e '**/*.min.js' -e '**/*.src.js' node_modules/*/dist/vl-*.js .",
