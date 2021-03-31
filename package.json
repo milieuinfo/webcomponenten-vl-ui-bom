@@ -58,7 +58,7 @@
     "vl-ui-cookie-statement": "^1.0.1",
     "vl-ui-core": "^7.2.1",
     "vl-ui-data-table": "^4.0.4",
-    "vl-ui-datepicker": "3.2.5",
+    "vl-ui-datepicker": "^3.2.6",
     "vl-ui-demo": "^1.3.3",
     "vl-ui-description-data": "3.0.7",
     "vl-ui-document": "^1.0.3",
