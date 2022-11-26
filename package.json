@@ -119,6 +119,6 @@
   "devDependencies": {
     "copyfiles": "2.4.1",
     "mocha-junit-reporter": "2.2.0",
-    "mocha-multi-reporters": "1.5.1"
+    "mocha-multi-reporters": "1.0.0-art-external1"
   }
 }
